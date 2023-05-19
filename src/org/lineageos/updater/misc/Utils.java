@@ -156,10 +156,8 @@ public class Utils {
                 SystemProperties.get(Constants.PROP_DEVICE));
         String type = SystemProperties.get(Constants.PROP_RELEASE_TYPE).toLowerCase(Locale.ROOT);
 
-        String serverUrl = SystemProperties.get(Constants.PROP_UPDATER_URI);
-        if (serverUrl.trim().isEmpty()) {
-            serverUrl = context.getString(R.string.updater_server_url);
-        }
+
+        String serverUrl = context.getString(R.string.updater_server_url);
 
         return serverUrl.replace("{device}", device)
                 .replace("{type}", type)
